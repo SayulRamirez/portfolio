@@ -355,21 +355,21 @@ p {
 }
 
 .tool-card::before {
-    content: "";
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: conic-gradient(
-        transparent, 
-        transparent, 
-        rgba(var(--color-low-purple), 1)
-    );
-    animation: rotate-light 3s linear infinite;
-    z-index: -2;
-    opacity: 0;
-    transition: opacity 0.4s ease;
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: conic-gradient(
+    transparent, 
+    transparent, 
+    rgba(var(--color-low-purple), 1)
+  );
+  animation: rotate-light 3s linear infinite;
+  z-index: -2;
+  opacity: 0;
+  transition: opacity 0.4s ease;
 }
 
 .tool-card::after {
@@ -520,6 +520,234 @@ p {
 .trajectory-section article:last-of-type .circule {
   border-left: 3px solid transparent !important;
   padding-bottom: 0;
+}
+
+/* PROJECTS */
+.projects-section {
+  background-color: rgb(var(--color-high-black));
+  color: rgb(var(--color-white));
+}
+
+.projects-section h2 {
+  color: rgb(var(--color-white));
+  font-family: "Outfit", sans-serif;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  position: relative;
+  display: inline-block;
+}
+
+.projects-section h2::after {
+  content: '';
+  position: absolute;
+  width: 60%;
+  height: 4px;
+  background-color: rgb(var(--color-yellow));
+  bottom: -10px;
+  left: 8px;
+  border-radius: 2px;
+}
+
+.card-proyect {
+  width: 30%;
+  background-color: rgb(var(--color-low-black));
+  border: 1px solid rgba(var(--color-gray), 0.12);
+  overflow: hidden;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.card-proyect:hover {
+  box-shadow: 0 10px 30px rgba(var(--color-yellow), 0.15);
+  border-color: rgba(var(--color-yellow), 0.4) !important;
+}
+
+.card-proyect .card-img-top {
+  border-bottom: 1px solid rgba(var(--color-gray), 0.1);
+  filter: grayscale(20%);
+  transition: filter 0.3s ease;
+}
+
+.card-proyect:hover .card-img-top {
+  filter: grayscale(0%);
+}
+
+.card-title {
+  color: rgb(var(--color-white));
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.card-text {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  color: rgb(var(--color-gray));
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.capsule {
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.75rem;
+  padding: 4px 12px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.java {
+  background-color: rgba(237, 0, 0, 0.774);
+  color: rgb(var(--color-gray));
+  border: 1px solid rgba(237, 138, 0, 0.2);
+}
+
+.java:hover {
+  background-color: rgb(237, 0, 0);
+  color: rgb(var(--color-white));
+  border: 1px solid rgba(237, 138, 0);
+}
+
+.spring-boot {
+  background-color: rgba(1, 102, 1, 0.774);
+  color: rgb(var(--color-gray));
+  border: 1px solid rgba(0, 168, 0, 0.2);
+}
+
+.spring-boot:hover {
+  background-color: rgb(1, 102, 1);
+  color: rgb(var(--color-white));
+  border: 1px solid rgb(0, 168, 0);
+}
+
+.postgre-sql {
+  background-color: rgb(7, 10, 219, 0.774);
+  color: rgb(var(--color-gray));
+  border: 1px solid rgba(40, 44, 238, 0.2);
+}
+
+.postgre-sql:hover {
+  background-color: rgb(7, 10, 219);
+  color: rgb(var(--color-white));
+  border: 1px solid rgb(40, 44, 238);
+}
+
+.docker {
+  background-color: rgba(92, 95, 255, 0.774);
+  color: rgb(var(--color-gray));
+  border: 1px solid rgba(109, 112, 255, 0.2);
+}
+
+.docker:hover {
+  background-color: rgb(92, 95, 255);
+  color: rgb(var(--color-white));
+  border: 1px solid rgb(109, 112, 255);
+}
+
+.java-script {
+  background-color: rgba(255, 239, 12, 0.774);
+  color: rgb(var(--color-low-black));
+  border: 1px solid rgba(255, 238, 0, 0.2);
+}
+
+.java-script:hover {
+  background-color: rgb(255, 239, 12);
+  color: rgb(var(--color-high-black));
+  border: 1px solid rgb(255, 238, 0);
+}
+
+.html {
+  background-color: rgba(228, 110, 13, 0.774);
+  color: rgb(var(--color-gray));
+  border: 1px solid rgba(255, 115, 0, 0.2);
+}
+
+.html:hover {
+  background-color: rgb(228, 110, 13);
+  color: rgb(var(--color-white));
+  border: 1px solid rgb(255, 115, 0);
+}
+
+.php {
+  background-color: rgba(132, 6, 182, 0.774);
+  color: rgb(var(--color-gray));
+  border: 1px solid rgba(187, 14, 255, 0.2);
+}
+
+.php:hover {
+  background-color: rgb(132, 6, 182);
+  color: rgb(var(--color-white));
+  border: 1px solid rgb(187, 14, 255);
+}
+
+.swagger {
+  background-color: rgba(51, 245, 51, 0.774);
+  color: rgb(var(--color-low-black));
+  border: 1px solid rgba(0, 168, 0, 0.2);
+}
+
+.swagger:hover {
+  background-color: rgb(51, 245, 51);
+  color: rgb(var(--color-high-black));
+  border: 1px solid rgb(0, 168, 0);
+}
+
+.junit {
+  background-color: rgba(237, 0, 0, 0.774);
+  color: rgb(var(--color-gray));
+  border: 1px solid rgba(10, 131, 10, 0.2);
+}
+
+.junit:hover {
+  background-color: rgb(237, 0, 0);
+  color: rgb(var(--color-white)); 
+  border: 1px solid rgb(10, 131, 10);
+}
+
+.card-proyect a {
+  text-decoration: none;
+  color: rgb(var(--color-white));
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.9rem;
+  font-weight: 600;
+  background-color: rgba(var(--color-high-black), 0.5);
+  margin: 1rem;
+  border-radius: 8px;
+  border: 1px solid rgba(var(--color-yellow), 0.3);
+  transition: all 0.2s ease;
+}
+
+.card-proyect a svg {
+  transition: transform 0.3s ease;
+  fill: currentColor;
+}
+
+.card-proyect a:hover svg {
+  transform: scale(1.1);
+}
+
+.card-proyect a svg g {
+  fill: currentColor !important;
+}
+
+@media (max-width: 990px) {
+  .card-proyect {
+    width: 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .card-proyect {
+    width: 48%;
+  }
+}
+
+@media (max-width: 500px) {
+  .card-proyect {
+    width: 90%;
+  }
 }
 
 /*.outfit-<uniquifier> {
