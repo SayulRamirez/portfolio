@@ -26,7 +26,7 @@
                 <div class="collapse navbar-collapse flex-row-reverse" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="#about">Sobre mí</a>
+                            <a class="nav-link" aria-current="page" href="#about">Acerca de mí</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#skills">Habilidades</a>
@@ -54,7 +54,7 @@
                             <div>
                                 <h1>Hola, soy <span class="name">Saúl Ramírez</span></h1>
                                 <h2 class="h4 brillo-animado">Desarrollador Backend</h2>
-                                <p>Especializado en construir APIs seguras, arquitecturas escalables y soluciones web que
+                                <p>Lic. en Ingeniaría Informática especializado en construir APIs seguras, arquitecturas escalables y soluciones web que
                                     impulsan el valor del negocio.</p>
                             </div>
                             <div class="d-flex flex-column gap-3">
@@ -140,7 +140,7 @@
     <section id="about" class="about-section">
         <div class="container-fluid">
             <div class="container-sm mt-2 py-5 px-3">
-                <h2 class="px-2">Acerca de mi</h2>
+                <h2 class="px-2">Acerca de mí</h2>
                 <div class="row">
                     <div class="col-12 d-flex flex-column justify-content-center gap-5">
                         <p class="px-2">Soy un <strong>Desarrollador Backend</strong> enfocado en arquitecturas escalables y buenas prácticas, con una trayectoria que combina el desarrollo de software tradicional con la vanguardia de la <strong>Inteligencia Artificial</strong>. Mi experiencia técnica abarca desde la creación de APIs robustas en <strong>Java y Spring Boot</strong>, hasta el desarrollo de plataformas web con <strong>PHP y JavaScript</strong>.</p>
@@ -295,61 +295,82 @@
             </div>
         </div>
     </section>
-    <section id="trajectory" class="container-sm mt-2 py-5 px-3">
-        <h1 class="px-2">Trayectoria</h1>
-        <div class="px-2">
-
-            <article class="row justify-content-center">
-                <style>
-                    .circule::before {
-                        content: '';
-                        height: 15px;
-                        width: 15px;
-                        border-radius: 50%;
-                        background-color: aqua;
-                        position: absolute;
-                        top: 0;
-                        left: calc(-2px - 0.5rem);
-                    }
-                </style>
-                <div class="col-12 col-sm-9 col-md-6 px-2 border-start border-4 border-success position-relative circule">
-                    <div class="d-flex justify-content-between">
-                        <p>Corporativo Muñoz</p>
-                        <div>
-                            <time datetime="11-09-2025">Septiembre 2025</time>
-                            <span>-</span>
-                            <time datetime="05-03-2026">Actual</time>
+    <section id="trajectory" class="trajectory-section">
+        <div class="container-fluid">
+            <div class="container-sm mt-2 py-5 px-3">
+                <h2 class="px-2">Trayectoria</h2>
+                <div class="px-2">
+                    <article class="row justify-content-center">
+                        <div class="col-12 col-sm-9 col-md-7 px-2 border-start border-4 border-success position-relative circule jobs-container">
+                            <div class="ps-3">
+                                <div class="d-flex justify-content-between align-items-center gap-1 flex-wrap mb-2">
+                                    <p class="job">Corporativo Muñoz</p>
+                                    <div>
+                                        <time datetime="11-09-2025">Sep 2025</time>
+                                        <span>-</span>
+                                        <time datetime="05-03-2026">Actual</time>
+                                    </div>
+                                </div>
+                                <p class="job-position">Analista IA</p>
+                                <div>
+                                    <ul>
+                                        <li>Diseño y estructuración de flujos lógicos para voicebots, optimizando la toma de decisiones de la IA para lograr una interacción natural y eficiente.</li>
+                                        <li>Aplicación de Prompt Engineering avanzado, desarrollando y testeando instrucciones precisas para modelos de lenguaje (LLMs) con el fin de mejorar la calidad de la interacción.</li>
+                                        <li>Análisis y entrenamiento continuo de modelos de IA, utilizando métricas de desempeño para ajustar la lógica de conversación y aumentar la tasa de resolución automática.</li>
+                                        <li>Identificación y automatización de procesos operativos, detectando oportunidades de mejora para implementar soluciones basadas en IA que ahorren tiempo y recursos.</li>
+                                        <li>Gestión de requerimientos para clientes B2B, asegurando que la implementación de la IA resuelva necesidades específicas de negocio y mejore la captación de leads.</li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <p>Analista IA</p>
-                </div>
-            </article>
-            <article class="row justify-content-center">
-                <div class="col-12 col-sm-9 col-md-6 px-2 border-start border-4 border-success position-relative circule">
-                    <div class="d-flex justify-content-between">
-                        <p>EDUCEM</p>
-                        <div>
-                            <time datetime="01-09-2022">Diciembre 2025</time>
-                            <span>-</span>
-                            <time datetime="13-12-2025">Septiembre 2022</time>
+                    </article>
+                    <article class="row justify-content-center">
+                        <div class="col-12 col-sm-9 col-md-7 px-2 border-start border-4 border-success position-relative circule">
+                            <div class="ps-3">
+                                <div class="d-flex justify-content-between align-items-center gap-1 flex-wrap mb-2">
+                                    <p class="job">EDUCEM</p>
+                                    <div>
+                                        <time datetime="13-12-2025">Sep 2022</time>
+                                        <span>-</span>
+                                        <time datetime="01-09-2022">Dic 2025</time>
+                                    </div>
+                                </div>
+                                <p class="job-position">Lic. en Ingeniería Informática</p>
+                                <div>
+                                    <ul>
+                                        <li>Especializacón en desarrollo de software.</li>
+                                        <li>Especializacón en el ecosistema de Java.</li>
+                                        <li>Profundización en Base de datos.</li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <p>Lic. en Ingeniería Informática</p>
-                </div>
-            </article>
-            <article class="row justify-content-center">
-                <div class="col-12 col-sm-9 col-md-6 px-2 border-start border-4 border-success position-relative circule">
-                    <div class="d-flex justify-content-between">
-                        <p>Sivoz</p>
-                        <div>
-                            <time datetime="01-02-2025">Febrero 2025</time>
-                            <span>-</span>
-                            <time datetime="01-08-2025">Agosto 2025</time>
+                    </article>
+                    <article class="row justify-content-center">
+                        <div class="col-12 col-sm-9 col-md-7 px-2 border-start border-4 border-success position-relative circule">
+                            <div class="ps-3">
+                                <div class="d-flex justify-content-between align-items-center gap-1 flex-wrap mb-2">
+                                    <p class="job">Sivoz</p>
+                                    <div>
+                                        <time datetime="01-02-2025">Feb 2025</time>
+                                        <span>-</span>
+                                        <time datetime="01-08-2025">Ago 2025</time>
+                                    </div>
+                                </div>
+                                <p class="job-position">Practicante de Sistemas</p>
+                                <div>
+                                    <ul>
+                                        <li>Desarrollo y mantenimiento de sistemas web con PHP, JavaScript, HTML y CSS, optimizando funcionalidad y estructura del código.</li>
+                                        <li>Implementación de nuevas funcionalidades, como visualizaciones en mapas usando Google Maps API para representar rutas, direcciones y puntos clave mediante marcadores personalizados.</li>
+                                        <li>Trabajo colaborativo con diseñadores para integrar soluciones que mejoren la experiencia del usuario.</li>
+                                        <li>Atención a incidencias reportadas por usuarios a través del call center, brindando soporte técnico de primer nivel.</li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <p>Practicante de Sistemas</p>
+                    </article>
                 </div>
-            </article>
+            </div>
         </div>
     </section>
     <style>
