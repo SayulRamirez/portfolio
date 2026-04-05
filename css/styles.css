@@ -561,10 +561,16 @@ p {
   border-color: rgba(var(--color-yellow), 0.4) !important;
 }
 
+.card-img, .card-img-bottom {
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+
 .card-proyect .card-img-top {
   border-bottom: 1px solid rgba(var(--color-gray), 0.1);
   filter: grayscale(20%);
   transition: filter 0.3s ease;
+  cursor: zoom-in; /* Indica que se puede ampliar */
 }
 
 .card-proyect:hover .card-img-top {
@@ -732,21 +738,55 @@ p {
   fill: currentColor !important;
 }
 
-@media (max-width: 990px) {
+@media (max-width: 991px) {
   .card-proyect {
     width: 45%;
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .card-proyect {
-    width: 48%;
+    width: clamp(360px, 70%, 500px);
   }
 }
 
 @media (max-width: 500px) {
   .card-proyect {
-    width: 90%;
+    width: 100%;
+  }
+}
+
+/* MODAL PROJECTS */
+.modal-content {
+  color: rgb(var(--color-gray));
+  background-color: rgba(var(--color-high-black), 0.8);
+  border: 1px solid rgba(var(--color-yellow), 0.3);
+  box-shadow: 0 0 30px rgba(var(--color-yellow), 0.2);
+}
+
+.btn-close-modal {
+  border: none;
+  margin-left: auto;
+  color: rgb(var(--color-gray));
+  background-color: rgba(var(--color-high-black), .8);
+}
+
+.carousel-img {
+  max-height: 80vh;
+  object-fit: contain;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  color: rgba(var(--color-low-purple), .9);
+  filter: drop-shadow(0 0 5px rgba(var(--color-low-purple), 0.8));
+}
+
+@media (max-width: 576px) {
+  .modal-dialog {
+      max-width: 80%;
+      margin-right: auto;
+      margin-left: auto;
   }
 }
 
