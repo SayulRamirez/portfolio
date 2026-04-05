@@ -75,7 +75,7 @@
                                     </a>
                                 </div>
                                 <div>
-                                    <button id="btnEmail" type="button" class="btn btn-warning btn-email" 
+                                    <button type="button" class="btn btn-warning btn-email btnEmail" 
                                         data-bs-toggle="tooltip" data-bs-placement="top" data-bs-custom-class="custom-tooltip" data-bs-title="Copiar correo">
                                         <i class="bi bi-envelope-at-fill"></i>
                                     </button>
@@ -116,14 +116,16 @@
                 toastBody.innerHTML = '';
             });
 
-            document.getElementById('btnEmail').addEventListener('click', async () => {
-                try {
-                    await navigator.clipboard.writeText(email);
-                    toastBody.innerHTML = '¡Email copiado!';
-                    toast.show();
-                } catch {
-                    toastBody.innerHTML = `Ocurrio un error al copiar, te lo comparto: ${email}`;
-                }
+            document.querySelectorAll('.btnEmail').forEach(btn => {
+                btn.addEventListener('click', async () => {
+                    try {
+                        await navigator.clipboard.writeText(email);
+                        toastBody.innerHTML = '¡Email copiado!';
+                        toast.show();
+                    } catch {
+                        toastBody.innerHTML = `Ocurrio un error al copiar, te lo comparto: ${email}`;
+                    }
+                });
             });
         }
 
@@ -468,49 +470,63 @@
             </div>
         </div>
     </section>
-    <section id="certifications" class="container-sm mt-2 py-5 px-3">
-        <h1 class="px-2">Certificaciones</h1>
-        <div class="container-fluid px-2 d-flex justify-content-evenly flex-wrap gap-3">
-            <article class="card card-proyect">
-                <img src="public/certifications/boo_md.webp" class="card-img-top card-img h-auto" alt="Aplicación web de sorteo de intercambio">
-                <div class="card-body">
-                    <h5 class="card-title">Booster Java Backend Microservicios Middel</h5>
-                    <p class="card-text">Especializacón en Java con Spring Boot en el cual profundice en temas de arquitectura de microservicios, estructuras de datos y algoritmos de ordenamiento, el uso de docker, además de usar base de datos no relacional como MongoDB.</p>
-                    <p class="card-text">Institución: Metaphorce</p>
-                    <p class="card-text"><time datetime="01-03-2025">Marzo 2025</time> - <time datetime="01-08-2025">Agosto 2025</time></time></p>
+    <section id="certifications" class="certifications-section">
+        <div class="container-fluid">
+            <div class="container-sm mt-2 py-5 px3">
+                <h2 class="px-2">Certificaciones</h2>
+                <div class="container-fluid px-2 d-flex justify-content-evenly flex-wrap gap-3">
+                    <article class="card card-proyect card-cert">
+                        <img src="public/certifications/boo_md.webp" class="card-img-top card-img h-auto" alt="Aplicación web de sorteo de intercambio">
+                        <div class="card-body">
+                            <h5 class="card-title">Booster Java Backend Microservicios Middel</h5>
+                            <p class="card-text">Especializacón en Java con Spring Boot en el cual profundice en temas de arquitectura de microservicios, estructuras de datos y algoritmos de ordenamiento, el uso de docker, además de usar base de datos no relacional como MongoDB.</p>
+                            <p class="card-text">Institución: Metaphorce</p>
+                            <p class="card-text"><time datetime="01-03-2025">Marzo 2025</time> - <time datetime="01-08-2025">Agosto 2025</time></time></p>
+                        </div>
+                    </article>
+                    <article class="card card-proyect card-cert">
+                        <img src="public/certifications/boo_jr.webp" class="card-img-top card-img h-auto" alt="Aplicación web de sorteo de intercambio">
+                        <div class="card-body">
+                            <h5 class="card-title">Booster Java Backend Microservicios Junior</h5>
+                            <p class="card-text">Programa de especialización en Java junto con Spring Boot, además de profundizar más en base de datos, Git y GitHub.</p>
+                            <p class="card-text">Institución: Metaphorce</p>
+                            <p class="card-text"><time datetime="01-03-2024">Marzo 2024</time> - <time datetime="01-08-2024">Agosto 2024</time></time></p>
+                        </div>
+                    </article>
+                    <article class="card card-proyect card-cert">
+                        <img src="public/certifications/alura.webp" class="card-img-top card-img h-auto" alt="Aplicación web de sorteo de intercambio">
+                        <div class="card-body">
+                            <h5 class="card-title">Oracle Next Education - Backend</h5>
+                            <p class="card-text">Programa de especialización en el desarrollo back end con java. En este programa profundice en temas como POO, persistencia de datos utilizando JDBC y ORM (Hibernate) y Spring boot. Además, de base de datos como MySQL y Git y GitHub. Además de varios conceptos de JavaScript, HTML5 y CSS.</p>
+                            <p class="card-text">Institución: Alura latam y Oracle</p>
+                            <p class="card-text"><time datetime="01-03-2023">Marzo 2023</time> - <time datetime="01-01-2024">Enero 2024</time></time></p>
+                        </div>
+                    </article>
                 </div>
-            </article>
-            <article class="card card-proyect">
-                <img src="public/certifications/boo_jr.webp" class="card-img-top card-img h-auto" alt="Aplicación web de sorteo de intercambio">
-                <div class="card-body">
-                    <h5 class="card-title">Booster Java Backend Microservicios Junior</h5>
-                    <p class="card-text">Programa de especialización en Java junto con Spring Boot, además de profundizar más en base de datos, Git y GitHub.</p>
-                    <p class="card-text">Institución: Metaphorce</p>
-                    <p class="card-text"><time datetime="01-03-2024">Marzo 2024</time> - <time datetime="01-08-2024">Agosto 2024</time></time></p>
-                </div>
-            </article>
-            <article class="card card-proyect">
-                <img src="public/certifications/alura.webp" class="card-img-top card-img h-auto" alt="Aplicación web de sorteo de intercambio">
-                <div class="card-body">
-                    <h5 class="card-title">Oracle Next Education - Backend</h5>
-                    <p class="card-text">Programa de especialización en el desarrollo back end con java. En este programa profundice en temas como POO, persistencia de datos utilizando JDBC y ORM (Hibernate) y Spring boot. Además, de base de datos como MySQL y Git y GitHub. Además de varios conceptos de JavaScript, HTML5 y CSS.</p>
-                    <p class="card-text">Institución: Alura latam y Oracle</p>
-                    <p class="card-text"><time datetime="01-03-2023">Marzo 2023</time> - <time datetime="01-01-2024">Enero 2024</time></time></p>
-                </div>
-            </article>
+            </div>
         </div>
     </section>
-    <section id="footer" class="container-sm mt-2 py-5 px-3">
-        <div class="container-fluid px-2 d-flex justify-content-evenly flex-wrap gap-3">
-            <a class="" href="#" target="_self" download="cv_saul_ramirez.pdf"
-                title="Descargar cv de Saúl Ramírez" aria-label="Descargar CV de Saúl Ramírez">Descargar
-                CV</a>
-            <a class="" href="https://www.linkedin.com/in/sayul-ramirez/" target="_blank"
-                rel="noopener noreferrer" title="Ir a LinkedIn"
-                aria-label="Abrir perfil profesional de LinkedIn en una nueva pestaña">LinkedIn</a>
-            <a class="" href="https://github.com/SayulRamirez" target="_blank"
-                rel="noopener noreferrer" title="Ir a GitHub"
-                aria-label="Abrir perfil de GitHub en una nueva pestaña">GitHub</a>
+    <section id="footer" class="footer-section">
+        <div class="container-fluid">
+            <div class="container-sm mt-2 py-5 px3">
+                <div class="container-fluid px-2 d-flex justify-content-evenly flex-wrap gap-3">
+                    <a class="" href="public/cv-saul-ramirez.pdf" target="_self" download="cv-saul-ramirez.pdf"
+                        aria-label="Descargar CV">
+                        Descargar CV
+                    </a>
+                    <a class="" href="https://www.linkedin.com/in/sayul-ramirez/" target="_blank"
+                        rel="noopener noreferrer" aria-label="Abrir perfil profesional de LinkedIn en una nueva pestaña">
+                        LinkedIn
+                    </a>
+                    <a class="" href="https://github.com/SayulRamirez" target="_blank"
+                        rel="noopener noreferrer" aria-label="Abrir perfil de GitHub en una nueva pestaña">
+                        GitHub
+                    </a>
+                    <button class="btnEmail" type="button"> 
+                        Mi correo
+                    </button>
+                </div>
+            </div>
         </div>
     </section>
     <div class="modal fade" id="modalProyecto1" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">

@@ -790,6 +790,62 @@ p {
   }
 }
 
+/* CERTIFICATIONS */
+.certifications-section {
+  background-color: rgb(var(--color-white));
+  color: rgb(var(--color-high-black));
+}
+
+.certifications-section h2 {
+  color: rgb(var(--color-high-black));
+  font-family: "Outfit", sans-serif;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  position: relative;
+  display: inline-block;
+}
+
+.certifications-section h2::after {
+  content: '';
+  position: absolute;
+  width: 60%;
+  height: 4px;
+  background-color: rgb(var(--color-yellow));
+  bottom: -10px;
+  left: 8px;
+  border-radius: 2px;
+}
+
+.card-cert:hover {
+  box-shadow: 0 10px 30px rgba(var(--color-yellow), 0.6) !important;
+  border-color: rgba(var(--color-yellow), 0.4) !important;
+}
+
+.card-cert .card-img-top {
+  border-bottom: 1px solid rgba(var(--color-gray), 0.1);
+  filter: grayscale(20%);
+  transition: filter 0.3s ease;
+  cursor: default;
+}
+
+/* FOOTER */
+.footer-section {
+  background-color: rgb(var(--color-low-purple));
+}
+
+.footer-section a, .footer-section button {
+  color: rgb(var(--color-yellow));
+  text-decoration: none;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.footer-section button {
+  border: none;
+  background-color: transparent;
+}
 /*.outfit-<uniquifier> {
   font-family: "Outfit", sans-serif;
   font-optical-sizing: auto;
